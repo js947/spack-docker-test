@@ -16,6 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Generate Dockerfile
-      run: spack containerize >Dockerfile
+      run: /opt/spack/bin/spack containerize >Dockerfile
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag foo
