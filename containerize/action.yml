@@ -1,0 +1,5 @@
+name: Spack Containertize
+description: generate dockerfile from spack environment
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
