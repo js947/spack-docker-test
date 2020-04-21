@@ -1,2 +1,2 @@
 #!/bin/bash -l
-spack concretize
+spack containerize | tee Dockerfile
