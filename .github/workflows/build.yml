@@ -11,11 +11,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    container: spack/centos7
 
     steps:
     - uses: actions/checkout@v2
     - name: Generate Dockerfile
-      uses: spack/spack
       run: spack containerize >Dockerfile
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag foo
