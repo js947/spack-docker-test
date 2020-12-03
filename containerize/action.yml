@@ -2,4 +2,7 @@ name: Spack Containertize
 description: generate dockerfile from spack environment
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: spack/centos7:latest
+  args:
+    - spack
+    - containerize
